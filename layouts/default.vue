@@ -1,17 +1,22 @@
 <template>
   <div class="flex flex-col min-h-screen bg-secondary">
+    <Nav />
     <nuxt />
     <Footer />
   </div>
 </template>
 
 <script>
+
 import Footer from '~/components/Footer.vue'
+import Nav from '~/components/Nav'
 
 export default{
   components:{
+    Nav,
     Footer
-  }
+  },
+
 }
 </script>
 
