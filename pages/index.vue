@@ -1,15 +1,15 @@
 <template>
-  <div class="container flex flex-grow flex-shrink">
+  <div class="container flex-col flex-grow flex-shrink">
     <!-- <div>
       <logo />
     </div> -->
-    <h1>Hello :)</h1>
+    <h1 class="text-4xl text-txtwhite">Hello :)</h1>
     <p class="text-txtwhite">My name is Andrew</p>
     <p class="text-txtwhite">I’m a web developer of 5 years</p>
     <p class="text-txtwhite">I like to code, hack and adventure life away</p>
       <div>
         <p class="text-txtwhite">
-          Current location: <span>Hawea, NZ</span>
+          Current location: <span class="border-b-3 border-primary">Hawea, NZ</span>
         </p>
       </div>
   </div>
@@ -37,8 +37,8 @@ export default {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  /* align-items: center; */
+  text-align: left;
 }
 
 .title {

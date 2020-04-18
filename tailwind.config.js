@@ -8,7 +8,8 @@ const { colors } = require('tailwindcss/defaultTheme')
 module.exports = {
   theme: {
     container: {
-      center: true,
+      // center: true,
+      padding: '5rem',
     },
     colors:{
       primary: '#f3a712',
@@ -16,6 +17,10 @@ module.exports = {
       white: '#fff',
       txtwhite: '#fbf7f5',
     },
+    borderWidth: {
+      3: '3px'
+    },
+
   },
   variants: {},
   plugins: []
