@@ -1,8 +1,19 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen bg-secondary">
     <nuxt />
+    <Footer />
   </div>
 </template>
+
+<script>
+import Footer from '~/components/Footer.vue'
+
+export default{
+  components:{
+    Footer
+  }
+}
+</script>
 
 <style>
 html {

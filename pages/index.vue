@@ -1,39 +1,27 @@
 <template>
-  <div class="container">
-    <div>
+  <div class="container flex flex-grow flex-shrink">
+    <!-- <div>
       <logo />
-      <h1 class="title">
-        andrewbe-nuxt
-      </h1>
-      <h2 class="subtitle">
-        My site in Vue
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+    </div> -->
+    <h1>Hello :)</h1>
+    <p class="text-txtwhite">My name is Andrew</p>
+    <p class="text-txtwhite">I’m a web developer of 5 years</p>
+    <p class="text-txtwhite">I like to code, hack and adventure life away</p>
+      <div>
+        <p class="text-txtwhite">
+          Current location: <span>Hawea, NZ</span>
+        </p>
       </div>
-    </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+// import Logo from '~/components/Logo.vue'
+
 
 export default {
   components: {
-    Logo
+    // Logo,
   }
 }
 </script>
