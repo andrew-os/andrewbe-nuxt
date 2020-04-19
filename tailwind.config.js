@@ -18,6 +18,8 @@ module.exports = {
       txtwhite: '#fbf7f5',
     },
     borderWidth: {
+      1: '1px',
+      2: '2px',
       3: '3px'
     },
 

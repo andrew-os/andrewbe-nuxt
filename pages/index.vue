@@ -5,7 +5,7 @@
     </div> -->
     <h1 class="text-4xl text-txtwhite">Hello :)</h1>
     <p class="text-txtwhite">My name is Andrew</p>
-    <p class="text-txtwhite">I’m a web developer of 5 years</p>
+    <p class="text-txtwhite">I’m a web developer of {{date.getFullYear() - 2014 }} years </p>
     <p class="text-txtwhite">I like to code, hack and adventure life away</p>
       <div>
         <p class="text-txtwhite">
@@ -19,9 +19,15 @@
 // import Logo from '~/components/Logo.vue'
 
 
+
 export default {
   components: {
     // Logo,
+  },
+  data(){
+    return{
+      date: new Date()
+    }
   }
 }
 </script>
