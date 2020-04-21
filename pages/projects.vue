@@ -1,5 +1,5 @@
 <template>
-    <div class="container flex-col flex-grow flex-shrink">
+    <div class="container flex-col flex-grow flex-shrink mb-3">
         <h1 class="text-4xl text-txtwhite">Projects</h1>
 
         <p>Having worked as a Frontend developer for numerous years I have worked on 100's of websites.</p>
