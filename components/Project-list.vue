@@ -43,6 +43,10 @@ export default{
                         url: 'https://www.theviewfromtheshard.com/',
                     },
                     {
+                        title: 'Guildhall School of Music',
+                        url: 'https://www.gsmd.ac.uk/'
+                    },
+                    {
                         title: 'Skatepal',
                         url: 'http://www.skatepal.co.uk/',
                     },
