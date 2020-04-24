@@ -55,7 +55,7 @@ export default{
                     name: "Javascript + Frameworks/libraries(ES5, ES6, React, Vue, jQuery)"
                 },
                 {
-                    name: "SSR(Nuxt.js, Gatsby"
+                    name: "SSR(Nuxt.js, Gatsby)"
                 },
                 {
                     name:  "Node + Express"

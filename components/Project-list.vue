@@ -1,6 +1,6 @@
 <template>
     <div class="pl-6">
-        <li v-for="project in projects" :key="project.title">
+        <li v-for="project in projects" :key="project.title" class="text-primary">
            <a :href="project.url" target="_blank">
                {{project.title}}
             </a> 
