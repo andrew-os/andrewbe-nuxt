@@ -15,6 +15,9 @@ a{
 }
 
 a:hover::after{
+    @media screen and (min-width: 768px) {
+        
+    }
     content: '';
     position: absolute;
     width: 100%;
