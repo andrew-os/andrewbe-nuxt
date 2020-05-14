@@ -1,6 +1,6 @@
 <template>
     <div class="container flex-col flex-grow flex-shrink">
-        <h1 class="text-4xl text-txtwhite mb-4">Projects</h1>
+        <h1 class="text-4xl text-txtwhite mb-4">Work</h1>
         <h2 class="text-2xl text-txtwhite mb-2 text-bold">Experience: {{ date.getFullYear() - 2014 }} years</h2>
         <p>I’ve spent the past three years working purely as a Front End Developer, in London.</p>
         <p>This was mostly developing sites for Wordpress with the occasional static site or Single Page App.</p>

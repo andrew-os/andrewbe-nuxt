@@ -1,14 +1,27 @@
 <template >
     <div>
-        <div class="ham-w relative w-full">
-            <button class="hamburger" :class="mobileNavClasses" @click="toggleMobileNav" type="button">
-                <span class="hamburger-box">
+
+        <!--desktop nav -->
+        <nav class="hidden md:flex md:flex-row md:flex-row-reverse md:ml-0 py-4 capitalize ">
+
+            <nuxt-link v-for="route in $router.options.routes" :key="route.path" :to="route.path"
+            class="text-primary pr-4 text-lg" >
+                {{ route.name }}
+            </nuxt-link>
+
+        </nav>
+        <!--mobile nav -->
+
+            <div class="ham-w relative w-full">
+                <button class="hamburger md:hidden" :class="mobileNavClasses" @click="toggleMobileNav" type="button">
+                    <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
-            </button>
-        </div>
+                </button>
+            </div>
 
-        <nav class="flex flex-col flex-col-reverse md:flex-row md:flex-row-reverse ml-8 md:ml-0 py-4 capitalize">
+        <!--mobile nav list -->
+        <nav v-show="isOpen" class="flex flex-col flex-col-reverse ml-8  py-4 capitalize">
 
             <nuxt-link v-for="route in $router.options.routes" :key="route.path" :to="route.path"
             class="text-primary pr-4 text-lg" >
@@ -124,7 +137,7 @@ export default{
     computed: {
         mobileNavClasses(){
             return{
-                'is--active': !this.isOpen,
+                'is--active': this.isOpen,
             }
         }
     },
