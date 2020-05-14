@@ -14,20 +14,38 @@ a{
     position: relative;
 }
 
-a:hover::after{
+a:hover:not(.nuxt-link-exact-active)::after{
     @media screen and (min-width: 768px) {
-        
+        width: 100%;
+        bottom: -4px;
+        height: 1px;
+        left: 0;
     }
     content: '';
     position: absolute;
-    width: 100%;
-    bottom: -4px;
-    height: 1px;
     background: white;
-    left: 0;
     text-align: center;
 }
 
+
+
 p{
     @apply text-txtwhite;
+}
+.nuxt-link-exact-active{
+    @media screen and (min-width: 768px) {
+        border-bottom: 2px solid #fff;
+    }
+}
+.nuxt-link-exact-active:after{
+    content: '';
+    left: -20px;
+    height: 2px;
+    width: 10px;
+    background: #29335c;
+    position: absolute;
+    top: 50%;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }

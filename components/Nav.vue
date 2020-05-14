@@ -5,7 +5,7 @@
         <nav class="hidden md:flex md:flex-row md:flex-row-reverse md:ml-0 py-4 capitalize ">
 
             <nuxt-link v-for="route in $router.options.routes" :key="route.path" :to="route.path"
-            class="text-primary pr-4 text-lg" >
+            class="text-primary mr-4 text-lg" >
                 {{ route.name }}
             </nuxt-link>
 
@@ -13,7 +13,7 @@
         <!--mobile nav -->
 
             <div class="ham-w relative w-full">
-                <button class="hamburger md:hidden" :class="mobileNavClasses" @click="toggleMobileNav" type="button">
+                <button class="hamburger md:hidden focus:0" :class="mobileNavClasses" @click="toggleMobileNav" type="button">
                     <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -21,14 +21,16 @@
             </div>
 
         <!--mobile nav list -->
-        <nav v-show="isOpen" class="flex flex-col flex-col-reverse ml-8  py-4 capitalize">
+        <div class="nav-sidebar bg-primary md:hidden" :class="mobileNavClasses">
+            <nav v-show="isOpen" class="flex flex-col flex-col-reverse ml-8  py-4 capitalize md:hidden">
 
-            <nuxt-link v-for="route in $router.options.routes" :key="route.path" :to="route.path"
-            class="text-primary pr-4 text-lg" >
-                {{ route.name }}
-            </nuxt-link>
+                <nuxt-link v-for="route in $router.options.routes" :key="route.path" :to="route.path"
+                class="text-txtwhite pr-4 text-lg" >
+                    {{ route.name }}
+                </nuxt-link>
 
-        </nav>
+            </nav>
+        </div>
     </div>
 </template>
 
@@ -54,8 +56,9 @@
         background-color: transparent;
         position: fixed;
         right: 15px;
-
-
+    }
+    .hamburger:focus{
+        outline: 0;
     }
     .hamburger-box{
         position: relative;
@@ -102,6 +105,19 @@
         transition-property: transform;
     }
 
+    /*Sudebar */
+    .nav-sidebar{
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+
     /* Active styles */
     .hamburger.is--active .hamburger-inner{
         transition-delay: 75ms;
@@ -118,6 +134,11 @@
         transform: translate3d(0,-20px,0) rotate(-270deg);
         background-color: #fff;
     }
+    .nav-sidebar.is--active{
+        width: 75%;
+        box-shadow: 1px 0 5px 2px rgba(197,197,197,.38);
+    }
+
 
 </style>
 
